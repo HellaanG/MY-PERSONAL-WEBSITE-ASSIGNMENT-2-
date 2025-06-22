@@ -217,3 +217,20 @@ img {
 .music-control:focus {
   outline: none;
 }
+#lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #fff;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
