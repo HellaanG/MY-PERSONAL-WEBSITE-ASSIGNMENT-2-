@@ -1,0 +1,114 @@
+<html>
+<head>
+
+  <title>EDUCATION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="clock" style="font-size: 18px; font-weight: bold;"></div>
+<script>
+  function updateClock() {
+    const now = new Date();
+    const time = now.toLocaleTimeString();
+    const date = now.toLocaleDateString(undefined, {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    document.getElementById("clock").innerText = `${date} | ${time}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // initial call
+</script>
+
+  <header>
+    <h1>MY EDUCATION </h1>
+  </header>
+
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="biodata.html"> BIODATA</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html"> FAMILY</a>
+    <a href="gallery.html">SWEET MEMORIES</a>
+  </nav>
+
+<main>
+  <h7><strong>EDUCATIONAL BACKGROUND</strong>
+  <p>My educational journey has been a blend of academic achievements and personal growth. 
+    <br>From primary school to university, I have consistently strived for excellence in my studies while also engaging in extracurricular activities that have enriched my learning experience.
+    <br>Here is a summary of my educational background:</p>
+  <ol>
+  <li>
+    <strong>Universiti Malaysia Perlis (UNIMAP)</strong><br></h7>
+       <div class="slider">
+  <div class="slides">
+    <a href="images/unimap logo.png" target="_blank">
+      <img src="images/unimap logo.png" alt="UNIMAP">
+    </a>
+  </div>
+</div>
+        </a>
+      </div>
+    </div>
+    <ul><li>
+     <h6>
+    <em>2024 - Present</em><br>
+    Currently enrolled in the Bachelor of Interactive Media Technology program, focusing on developing skills in interactive media design, programming and technology integration.
+    </h6>
+    </ul></li>
+  <br>
+  </li>
+  <br>
+  <li>
+<h7><strong>SMK Tun Syed Sheh Barakbah</strong><br></h7>
+    <div class="slider">
+  <div class="slides">
+    <a href="images/SMKTSSB.jpg" target="_blank">
+      <img src="images/SMKTSSB.jpg" alt="SMKTSSB">
+    </a>
+  </div>
+</div>
+    <ul><li>
+      <h6>
+    <em>2021 - 2023</em><br>
+    Sijil Tertinggi Persekolahan Malaysia (STPM) with a focus on Economic, Geography, General Studies and Bahasa Melayu. Achieved a CGPA of 2.00.
+      </h6>
+</ul></li>
+    <br>
+    <ul><li>
+<h6><em>2017 - 2021</em><br>
+    Completed secondary education with strong academic performance in Mathematics, Science, English, Economics, Accounting and History.
+    Participated in Kangaroo Maths competitions and received recognition for outstanding performance.
+</h6>
+</ul></li>
+  <br>
+  </li>
+  <br>
+  <li>
+<h7> <strong>SJK (C) PAI TEIK</strong><br></h7>
+   <div class="slider">
+  <div class="slides">
+    <a href="images/sjkcpt .jpeg" target="_blank">
+      <img src="images/sjkcpt .jpeg" alt="SJK (C) PAI TEIK">
+    </a>
+  </div>
+</div>
+    </div>
+    <ul><li>
+<h6><em>2011 - 2016</em><br>
+    Completed primary education with a focus on foundational subjects such as Mathematics, Science, English, and Bahasa Melayu.
+</h6>   </ul></li>
+</li>
+</ol>
+</main>
+
+ <footer>
+    &copy; HELLAAN MORRIS ANTHHONY | MY PERSONAL WEBSITE       
+ <br><a href="home.html">HOME</a> | <a href="biodata.html">MY BIODATA</a> | <a href="education.html">MY EXPERIENCE</a>| <a href="family.html">MY FAMILY</a> | <a href="gallery.html">SWEET MEMORIES</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+
+  <title>EXPERIENCE </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="clock" style="font-size: 18px; font-weight: bold;"></div>
+<script>
+  function updateClock() {
+    const now = new Date();
+    const time = now.toLocaleTimeString();
+    const date = now.toLocaleDateString(undefined, {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    document.getElementById("clock").innerText = `${date} | ${time}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // initial call
+</script>
+
+  <header>
+    <h1>MY EXPERIENCE </h1>
+  </header>
+
+  <nav>
+     <a href="home.html">HOME</a>
+    <a href="biodata.html"> BIODATA</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html"> FAMILY</a>
+    <a href="gallery.html">SWEET MEMORIES</a>
+  </nav>
+
+  <main>
+    <h5>MY EXPERIENCE: <p><strong>Company:</strong> MR.DIY,SUNGAI BAKAP</p>
+    <p><strong>Duration:</strong> July 2024 – October 2024</p>
+    <p><strong>Role:</strong> CASHIER</p></h5>
+    <br> <h6>
+     <div class="slider">
+  <div class="slides">
+    <a href="images/mr.diy.jpeg" target="_blank">
+      <img src="images/mr.diy.jpeg" alt="MR.DIY">
+    </a>
+  </div>
+</div>
+    <p>As a cashier at MR.DIY, I was responsible for handling customer transactions, managing cash registers and providing excellent customer service. 
+   <br> My role involved scanning items, processing payments, and ensuring a smooth checkout experience for customers.
+   <br>I also assisted in maintaining the cleanliness and organization of the store.</p>
+    </h6>
+    </main>
+
+    <footer>
+    &copy; HELLAAN MORRIS ANTHHONY | MY PERSONAL WEBSITE 
+ <br><a href="home.html">HOME</a> | <a href="biodata.html">MY BIODATA</a> | <a href="education.html">MY EDUCATION</a> | <a href="family.html">MY FAMILY</a> | <a href="gallery.html">SWEET MEMORIES</a>
+</footer>
+</body>
+</html>

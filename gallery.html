@@ -1,0 +1,99 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery | Sweet Memories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div id="clock" style="font-size: 18px; font-weight: bold;"></div>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      const date = now.toLocaleDateString(undefined, {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+      document.getElementById("clock").innerText = `${date} | ${time}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+
+  <header>
+    <h1>SWEET MEMORIES</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="biodata.html">BIODATA</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY</a>
+    <a href="gallery.html">SWEET MEMORIES</a>
+  </nav>
+
+<div class="gallery-container">
+  <div class="gallery-item"><img src="GALLERY/IMG1.jpg" alt="Image 1" onclick="expand(this)"><div class="caption">MY BEST FRIEND</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG2.jpg" alt="Image 2" onclick="expand(this)"><div class="caption">MY BOYFRIEND</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG3.jpg" alt="Image 3" onclick="expand(this)"><div class="caption">MY BROTHER</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG4.jpg" alt="Image 4" onclick="expand(this)"><div class="caption">FAMILY</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG5.jpg" alt="Image 5" onclick="expand(this)"><div class="caption">MY BROTHER</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG6.jpg" alt="Image 6" onclick="expand(this)"><div class="caption">THE SUNSET</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG7.jpg" alt="Image 7" onclick="expand(this)"><div class="caption">MY PUPPY</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG8.jpg" alt="Image 8" onclick="expand(this)"><div class="caption">BLOOD DONATION</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG9.jpg" alt="Image 9" onclick="expand(this)"><div class="caption">RAINDROP</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG10.jpg" alt="Image 10" onclick="expand(this)"><div class="caption">PENANG SENTRAL VIEW</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG11.jpg" alt="Image 11" onclick="expand(this)"><div class="caption">MIRROR PICTURE</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG12.jpg" alt="Image 12" onclick="expand(this)"><div class="caption">THE TRIOS</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG13.jpg" alt="Image 13" onclick="expand(this)"><div class="caption">AUNT & HER DAUGHTER</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG14.jpg" alt="Image 14" onclick="expand(this)"><div class="caption">AUNT & COUSIN</div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG15.jpg" alt="Image 15" onclick="expand(this)"><div class="caption">FIRST DAY AT UNIVERSITY </div></div>
+  <div class="gallery-item"><img src="GALLERY/IMG16.jpg" alt="Image 16" onclick="expand(this)"><div class="caption">MY ROOMATE</div></div>
+</div>
+<div class="gallery-item">
+  <video width="220" controls>
+    <source src="GALLERY/VD1.mp4" type="video/mp4">
+  </video>
+  <div class="caption">THE SUNRISE VIEW </div>
+</div>
+<div class="gallery-item">
+  <video width="220" controls>
+    <source src="GALLERY/VD3.mp4" type="video/mp4">
+  </video>
+  <div class="caption">LAST DAY OF CLASS ON SEM 1</div>
+</div>
+
+<div id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img" src="">
+</div>
+
+    <footer>
+      &copy; HELLAAN MORRIS ANTHONY | MY PERSONAL WEBSITE 
+  <br><a href="home.html">HOME</a> | <a href="biodata.html">MY BIODATA</a> | <a href="experience.html">MY EXPERIENCE</a> | <a href="education.html">MY EDUCATION</a> 
+    </footer>
+<script>
+  function expand(imgElement) {
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImg = document.getElementById("lightbox-img");
+
+    lightbox.style.display = "block";
+    lightboxImg.src = imgElement.src;
+  }
+
+  // Optional: ESC key to close
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>

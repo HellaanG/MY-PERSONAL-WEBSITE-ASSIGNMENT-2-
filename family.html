@@ -1,0 +1,113 @@
+<html>
+<head>
+
+  <title>FAMILY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="clock" style="font-size: 18px; font-weight: bold;"></div>
+<script>
+  function updateClock() {
+    const now = new Date();
+    const time = now.toLocaleTimeString();
+    const date = now.toLocaleDateString(undefined, {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    document.getElementById("clock").innerText = `${date} | ${time}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // initial call
+</script>
+
+  <header>
+    <h1>MY FAMILY </h1>
+  </header>
+
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="biodata.html"> BIODATA</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html"> FAMILY</a>
+    <a href="gallery.html">SWEET MEMORIES</a>
+  </nav>
+
+<main>
+  <h7> <u>MY FAMILY </u></h7>
+  <p><h8>
+    I come from a close-knit and supportive family of five who have always encouraged me to pursue my goals and values. Each member plays a special role in shaping who I am today.
+  </p>
+  <ul>
+  <li>
+<h7><strong>FATHER : Z. MORRIS ANTHONY , MOTHER : USHA A/P RAMASAMY</strong></h7>   <br>
+   <div class="slider">
+  <div class="slides">
+    <a href="IMAGES/MOM & DAD.jpg" target="_blank">
+      <img src="IMAGES/MOM & DAD.jpg" alt="MY PARENTS">
+    </a>
+  </div>
+</div>
+    <h8>
+     <br>My parents are the pillars of my family, providing love, guidance and support throughout my life.
+     <br>My dad is hardworking and dedicated, always striving to provide for our family. He has taught me the value of perseverance and integrity.
+     <br>My mom is nurturing and supportive, instilling in me the importance of kindness and empathy. Together, they have created a loving home where I feel safe and encouraged to grow.</p>
+    </h8>
+  </li>
+  <br>
+  <li>
+<h7><strong>YOUNGER BROTHER : RONNAL A/L MORRIS ANTHONY </strong></h7> <br>
+<div class="slider">
+  <div class="slides">
+    <a href="IMAGES/RONNAL.jpg" target="_blank">
+      <img src="IMAGES/RONNAL.jpg" alt="MY BROTHER">
+    </a>
+  </div>
+</div>
+<h8><p>Ronnal is my younger brother, who is currently pursuing his studies at SMK Tun Syed Sheh Barakbah as a Form 5 student.
+     <br>He is a bright and curious individual, always eager to learn new things just like me.
+    <br> We share a strong bond and I cherish the moments we spend together, whether it's studying, playing games or simply enjoying each other's company.</p></h8>
+  <br>
+    </li>
+    <li>
+  <h7>
+      <strong>YOUNGEST BROTHER : SHERWIN A/L MORRIS ANTHONY</strong><h7> <br>
+  <div class="slider">
+  <div class="slides">
+    <a href="IMAGES/SHERWIN.jpg" target="_blank">
+      <img src="IMAGES/SHERWIN.jpg" alt="MY YOUNGEST BROTHER">
+    </a>
+  </div>
+</div>
+</li>
+
+<h8>
+    <p>Sherwin is my youngest brother, who is currently studying at SMK Tun Syed Sheh Barakbah as a Form 2 student.
+     <br>He is full of energy, always bringing joy and laughter to our family.
+     <br>Despite his young age, he has a keen interest in learning and he love to styling in his own unique way, which inspires me to appreciate the simple joys of life.</p> </h8>
+  </li>
+  <br>
+    <li>
+<h7><strong>FAMILY PHOTO</strong></h7> <br>
+
+    <div class="slider">
+      <div class="slides">
+        <a href="IMAGES/FAMILY.jpg" target="_blank">
+          <img src="IMAGES/FAMILY.jpg" alt="FAMILY PHOTO">    
+        </a>
+      </div>
+    </div>
+    <h8>
+  <p> This is a cherished family photo that captures the essence of our bond and the love we share.
+  <br>It reminds me of the support and encouragement I receive from my family, which motivates me to strive for success in all my endeavors.</p></h8>
+  </li>
+</ul>
+</main>
+</body>
+<footer>
+  &copy; HELLAAN MORRIS ANTHONY | MY PERSONAL WEBSITE 
+  <br><a href="home.html">HOME</a> | <a href="biodata.html">MY BIODATA</a> | <a href="experience.html">MY EXPERIENCE</a> | <a href="education.html">MY EDUCATION</a> | <a href="gallery.html">SWEET MEMORIES</a>
+</html>

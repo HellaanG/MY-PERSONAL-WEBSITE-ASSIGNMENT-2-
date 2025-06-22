@@ -1,0 +1,90 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BIODATA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Clock -->
+  <div id="clock" style="font-size: 18px; font-weight: bold; text-align: center; padding: 10px;"></div>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      const date = now.toLocaleDateString(undefined, {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+      document.getElementById("clock").innerText = `${date} | ${time}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock(); // initial call
+  </script>
+
+  <!-- Header -->
+  <header>
+    <h1>MY BIODATA</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="biodata.html">BIODATA</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY</a>
+    <a href="gallery.html">SWEET MEMORIES</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+      <caption style="font-size: 1.5em; margin-bottom: 10px;"><strong>Personal Information</strong></caption>
+      <tr><th>MY NAME</th><td>HELLAAN A/P MORRIS ANTHONY</td></tr>
+      <tr><th>MY MATRIX NO</th><td>241572591</td></tr>
+      <tr><th>DATE OF BIRTH</th><td>04 NOVEMBER 2004</td></tr>
+      <tr><th>PLACE OF BIRTH</th><td>HOSPITAL SEBERANG JAYA, PENANG</td></tr>
+      <tr><th>AGE</th><td>21 years old</td></tr>
+      <tr><th>GENDER</th><td>FEMALE</td></tr>
+      <tr><th>NATIONALITY</th><td>MALAYSIAN</td></tr>
+      <tr><th>RELIGION</th><td>CHRISTIANITY</td></tr>
+      <tr><th>PHONE</th><td>014 - 7431264</td></tr>
+      <tr><th>EMAIL</th><td><a href="mailto:hellaanritacassia@gmail.com">hellaanritacassia@gmail.com</a></td></tr>
+      <tr><th>ADDRESS</th><td>NO 34, JALAN JAWI JAYA 6, TAMAN JAWI JAYA, 14200 SUNGAI JAWI, PULAU PINANG</td></tr>
+      <tr><th>KNOWN LANGUAGES</th><td>MALAY, ENGLISH, TAMIL AND MANDARIN</td></tr>
+      <tr><th>HOBBIES</th><td>READING, COOKING AND LISTENING TO MUSIC</td></tr>
+      <tr><th>PERSONAL TRAITS</th><td>FRIENDLY, HARDWORKING, CREATIVE AND PUNCTUAL</td></tr>
+    </table>
+
+    <!-- Favorite Movie Section -->
+<section style="text-align: center; margin-top: 40px;">
+  <h2>My Favourite Movie</h2>
+  <p><strong>Title:</strong> Snow White and the Seven Dwarfs (1937)</p>
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/5fzZFQBXSLM"
+    title="Snow White and the Seven Dwarfs (1937) Trailer #1"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; HELLAAN MORRIS ANTHONY | MY PERSONAL WEBSITE 
+    <br>
+    <a href="home.html">HOME</a> |
+    <a href="experience.html">MY EXPERIENCE</a> |
+    <a href="education.html">MY EDUCATION</a> |
+    <a href="family.html">MY FAMILY</a> |
+    <a href="gallery.html">SWEET MEMORIES</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intro | My Personal Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', serif;
+      background: url('IMAGES/BG.JPG') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+      color: white;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    #clock {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      z-index: 1;
+      color: white;
+    }
+
+    #music-toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 22px;
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .intro-container {
+      position: relative;
+      z-index: 2;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .animated-text {
+      font-size: 2.5em;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    #enter-btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      background-color: #00b4d8;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #enter-btn:hover {
+      background-color: #0077b6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="clock"></div>
+
+  <div class="overlay"></div>
+
+  <audio id="intro-audio" preload="auto">
+    <source src="INTRO/INTRO BGM.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="music-toggle">🔇</button>
+
+  <div class="intro-container">
+    <h1 class="animated-text">WELCOME TO MY PERSONAL WEBSITE 🌐</h1>
+    <button id="enter-btn">ENTER WEBSITE</button>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      const date = now.toLocaleDateString(undefined, {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+      document.getElementById("clock").innerText = `${date} | ${time}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    const audio = document.getElementById('intro-audio');
+    const toggleBtn = document.getElementById('music-toggle');
+    let isPlaying = false;
+
+    toggleBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        audio.pause();
+        toggleBtn.innerText = "🔇";
+      } else {
+        audio.play().catch(err => console.log('Playback failed:', err));
+        toggleBtn.innerText = "🔊";
+      }
+      isPlaying = !isPlaying;
+    });
+
+    document.body.addEventListener('click', function playOnce() {
+      if (!isPlaying) {
+        audio.play().catch(() => {});
+        isPlaying = true;
+        toggleBtn.innerText = "🔊";
+      }
+      document.body.removeEventListener('click', playOnce);
+    });
+
+    
+    document.getElementById('enter-btn').addEventListener('click', () => {
+      audio.pause();
+      window.location.href = 'home.html';
+    });
+  </script>
+
+</body>
+</html>

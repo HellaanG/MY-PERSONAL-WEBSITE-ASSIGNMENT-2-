@@ -1,0 +1,63 @@
+<html>
+<head>
+
+  <title>Home | My Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="clock" style="font-size: 18px; font-weight: bold;"></div>
+<script>
+  function updateClock() {
+    const now = new Date();
+    const time = now.toLocaleTimeString();
+    const date = now.toLocaleDateString(undefined, {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    document.getElementById("clock").innerText = `${date} | ${time}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // initial call
+</script>
+
+  <header>
+
+    <h1>Welcome to My Website</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="biodata.html"> BIODATA</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html"> FAMILY</a>
+    <a href="gallery.html">SWEET MEMORIES</a>
+  </nav>
+
+  <main>
+    <h2>Hello! I'm HELLAAN A/P MORRIS ANTHONY</h2>
+  
+<div class="slider">
+  <div class="slides">
+    <a href="images/me.jpg" target="_blank">
+      <img src="images/me.jpg" alt="THE PIC OF ME">
+    </a>
+  </div>
+</div>
+  <h2>INTRODUCTION</h2>
+  <h3>
+  <p>I'm a university student currently pursuing my degree in Interactive Media Technology at University Malaysia Perlis (UNIMAP). 
+    <br>I'm passionate about learning, exploring new ideas and developing skills that will help me grow both personally and professionally.
+    <br> Whether it’s working on academic projects or gaining hands-on experience. I’m always eager to take on new challenges and push myself further.
+     This website showcases my biodata, my experience, my education, my family and some sweet memories.</p></h3>
+  </main>
+
+  <footer>
+     &copy; HELLAAN MORRIS ANTHHONY | MY PERSONAL WEBSITE
+ <br><a href="biodata.html">MY BIODATA</a> | <a href="experience.html">MY EXPERIENCE</a> | <a href="education.html">MY EDUCATION</a> | <a href="family.html">MY FAMILY</a> | <a href="gallery.html">SWEET MEMORIES</a>
+  </footer>
+</body>
+</html>
